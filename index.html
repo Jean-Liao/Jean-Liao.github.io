@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LYC</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" href="img/icon.gif" type="image/gif">
+    </head>
+
+    <body>
+        <div class="wrapper">
+
+            <div class="left">
+                <img class="profile-picture" src="img/薯條.jpg" width="200" />
+                <h1 class="name">Liao Yi Chun</h1>
+            </div>
+            
+            <div class="right">
+                <audio controls autoplay loop><source  src="in_the_enchanted_garden.mp3" type="audio/mpeg"></audio>
+                <p class="bio">
+                    Hi!My name is Jean.I graduated from 
+                    <a href="http://www.fg.tp.edu.tw/bin/home.php">Taipei First Girls High School</a>
+                    , and I am now a 
+                    <a href="https://web.ee.ntu.edu.tw/">NTUEE</a>
+                     student.
+                </p>
+                <p>
+                    Hobbies:
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/ntueegbkt/">
+                             basketball
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.popo.tw/index">
+                                novels
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ani.gamer.com.tw/">
+                                animax
+                            </a>
+                        </li>
+                    </ul>
+                </p>
+                <p>Date/Time:</p>
+                <p id="datetime"></p>
+                <script>
+                    function dateandtime(){
+                        var dt = new Date();
+                        document.getElementById("datetime").innerHTML = (("0"+(dt.getMonth()+1)).slice(-2)) +"-"+ (("0"+dt.getDate()).slice(-2)) +"-"+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2) +":"+ (("0"+dt.getSeconds()).slice(-2)));
+                    }
+                    setInterval(dateandtime,1000);
+                </script>
+            </div>
+    </body>
+</html>
